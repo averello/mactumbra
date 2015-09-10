@@ -76,7 +76,6 @@
         [[NSNotificationCenter defaultCenter]postNotificationName:@"doneMirroring" object:nil];
         return;
     }
-    NSLog(@"mirror");
     CGDirectDisplayID disp = (CGDirectDisplayID) [[[glow.mirrorAreaWindow.screen deviceDescription]objectForKey:@"NSScreenNumber"] intValue];
     CGImageRef first = CGDisplayCreateImageForRect(disp, glow.mirrorAreaWindow.frame);
     GPUImagePicture *pic = [[GPUImagePicture alloc]initWithCGImage:first];
@@ -97,7 +96,6 @@
         [[NSNotificationCenter defaultCenter]postNotificationName:@"doneMirroring" object:nil];
         return;
     }
-    NSLog(@"augmenting");
     CGDirectDisplayID disp = (CGDirectDisplayID) [[[glow.mirrorAreaWindow.screen deviceDescription]objectForKey:@"NSScreenNumber"] intValue];
     CGImageRef first = CGDisplayCreateImageForRect(disp, glow.mirrorAreaWindow.frame);
     GPUImagePicture *pic = [[GPUImagePicture alloc]initWithCGImage:first];
@@ -122,7 +120,6 @@
         [[NSNotificationCenter defaultCenter]postNotificationName:@"doneMirroring" object:nil];
         return;
     }
-    NSLog(@"balanced");
     CGDirectDisplayID disp = (CGDirectDisplayID) [[[glow.mirrorAreaWindow.screen deviceDescription]objectForKey:@"NSScreenNumber"] intValue];
     CGImageRef first = CGDisplayCreateImageForRect(disp, glow.mirrorAreaWindow.frame);
     GPUImagePicture *pic = [[GPUImagePicture alloc]initWithCGImage:first];
